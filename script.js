@@ -271,19 +271,157 @@ form.addEventListener("submit", function (e) {
 
 // Dil Değiştirme (Geliştirilmiş)
 const translations = {
+
     tr: {
+        // Navbar
         home: "ANASAYFA",
         about: "HAKKIMDA",
         projects: "PROJELER",
         contact: "İLETİŞİM",
-        talk: "İLETİŞİME GEÇ"
+
+        // Hero
+        heroTitle: "Selam! Ben FATMA",
+        heroIntro: "Ben bir",
+        heroText1: "Kod ile tasarımı bir araya getirerek modern, erişilebilir ve kullanıcı odaklı web deneyimleri geliştiriyorum.",
+        heroText2: "Her projede performansı, kullanılabilirliği ve estetiği ön planda tutuyorum.",
+        contactBtn: "İletişime Geç!",
+
+        // About
+        aboutTitle: "Hakkımda",
+
+        aboutDescription:
+            "Merhaba! Ben Fatma Özer. Dijital deneyimler tasarlamayı ve geliştirmeyi seven bir yazılım geliştiricisiyim. Front-End geliştirme alanında uzmanlaşırken, modern teknolojilerle kullanıcı odaklı, performanslı ve sürdürülebilir web uygulamaları geliştirmeye odaklanıyorum. Aynı zamanda yalnızca web teknolojileriyle sınırlı kalmayıp, farklı yazılım alanlarını keşfetmeyi, yeni teknolojiler öğrenmeyi ve kullanıcı odaklı çözümler üretmeyi seviyorum.",
+
+        skillsTitle: "🛠️ Kullandığım Teknolojiler",
+
+        toolsTitle: "🧰 Kullandığım Araçlar",
+
+        // Projects
+        projectsTitle: "Projelerim",
+        project1Title: "Proje 1",
+        project1Description: "Proje 1 açıklaması buraya gelecek.",
+        liveDemoBtn: "Canlı Gör",
+
+        // Contact
+        contactTitle: "İletişime Geç",
+        contactDescription:"Yazılım geliştirme, web teknolojileri ve yeni projeler üzerine konuşmayı seviyorum. Birlikte çalışmak veya sadece fikir alışverişinde bulunmak isterseniz bana ulaşabilirsiniz.",
+        namePlaceholder: "Adınız Soyadınız",
+        emailPlaceholder: "E-posta",
+        messagePlaceholder: "Mesajınız...",
+        sendButton: "Gönder",
     },
 
     en: {
+        // Navbar
         home: "HOME",
-        about: "ABOUT",
+        about: "ABOUT ME",
         projects: "PROJECTS",
         contact: "CONTACT",
-        talk: "LET'S TALK"
+
+        // Hero
+        heroTitle: "Hi! I'm FATMA",
+        heroIntro: "I'm a",
+        heroText1: "I develop modern, accessible and user-focused web experiences by combining code and design.",
+        heroText2: "In every project, I prioritize performance, usability and aesthetics.",
+        contactBtn: "Contact Me!",
+
+        // About
+        aboutTitle: "About Me",
+
+        aboutDescription:
+            "Hello! I'm Fatma Özer, a software developer passionate about designing and building digital experiences. While specializing in Front-End development, I focus on creating modern, user-centered, high-performance, and sustainable web applications. Beyond web technologies, I enjoy exploring different areas of software development, learning new technologies, and developing solutions that deliver real value to users.",
+
+        skillsTitle: "🛠️ Technologies I Use",
+
+        toolsTitle: "🧰 Tools I Use",
+
+        // Projects
+        projectsTitle: "My Projects",
+
+        project1Title: "Project 1",
+        project1Description: "Project description will be added here.",
+        liveDemoBtn: "Live Demo",
+
+        // Contact
+        contactTitle: "Get In Touch",
+        contactDescription:"I enjoy discussing software development, web technologies, and new ideas. If you'd like to collaborate, have a project in mind, or simply want to connect, feel free to reach out.",
+        namePlaceholder: "Your Full Name",
+        emailPlaceholder: "Email Address",
+        messagePlaceholder: "Your Message...",
+        sendButton: "Send Message",
+
+
+
     }
+
 };
+
+// ==============================
+// Dil Değiştirme
+// ==============================
+function changeLanguage(lang) {
+
+    // Metinleri değiştir
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+
+        const key = element.dataset.i18n;
+
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+
+    });
+
+    // Placeholder'ları değiştir
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+
+        const key = element.dataset.i18nPlaceholder;
+
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+
+    });
+
+    // Aktif butonu değiştir
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    const activeBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
+
+    if (activeBtn) {
+        activeBtn.classList.add("active");
+    }
+
+    // Seçilen dili kaydet
+    localStorage.setItem("language", lang);
+}
+
+
+// ==============================
+// Dil Butonları
+// ==============================
+
+document.querySelectorAll(".lang-btn").forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        changeLanguage(button.dataset.lang);
+
+    });
+
+});
+
+
+// ==============================
+// Sayfa Açılırken
+// ==============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const savedLanguage = localStorage.getItem("language") || "tr";
+
+    changeLanguage(savedLanguage);
+
+});
