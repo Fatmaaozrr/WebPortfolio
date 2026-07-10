@@ -238,6 +238,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+ // Proje Kartları Responsive (Geliştirilmiş)
+document.querySelectorAll(".project-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        card.classList.toggle("active");
+
+    });
+
+});
+
 // EmailJS (Güvenli Sürüm)
 emailjs.init("VuAEUOz9IV_kkp9QV");// Public Key'i buraya ekleyin EmailJS hesabınızdan alabilirsiniz.
 

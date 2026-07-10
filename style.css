@@ -644,4 +644,1049 @@
     margin-right: auto;
 }
   
-  
+
+
+
+/* =======================================================
+   RESPONSIVE PART 1
+   Genel Yapı + Navbar
+=======================================================*/
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* Büyük Ekranlar */
+@media (min-width:1600px){
+
+    .hero,
+    .about-container,
+    .projects-grid,
+    .contact-container{
+
+        max-width:1500px;
+        margin:auto;
+
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .navbar{
+
+        padding:18px 5%;
+
+    }
+
+    .hero{
+
+        padding:0 5%;
+
+    }
+
+    .projects-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+        padding:0;
+
+    }
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .navbar{
+
+        padding:15px 5%;
+
+    }
+
+    .logo img{
+
+        height:65px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+    }
+
+}
+
+/* ===============================
+   Mobil Menü
+================================*/
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:15px 25px;
+
+        background:rgba(0,4,16,.95);
+
+        backdrop-filter:blur(18px);
+
+    }
+
+    .logo img{
+
+        height:55px;
+
+    }
+
+    .hamburger{
+
+        display:flex;
+        z-index:2001;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:0;
+        right:-100%;
+
+        width:260px;
+        height:100vh;
+
+        background:#08131f;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        gap:35px;
+
+        transition:.4s ease;
+
+        z-index:2000;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.4);
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .nav-links li{
+
+        list-style:none;
+
+    }
+
+    .nav-links a{
+
+        font-size:18px;
+
+        font-weight:600;
+
+    }
+
+    .language-switcher{
+
+        margin-left:auto;
+        margin-right:20px;
+
+    }
+
+}
+
+/* Küçük Telefon */
+
+@media (max-width:480px){
+
+    .navbar{
+
+        padding:12px 18px;
+
+    }
+
+    .logo img{
+
+        height:48px;
+
+    }
+
+    .language-switcher{
+
+        gap:6px;
+
+        font-size:13px;
+
+        margin-right:12px;
+
+    }
+
+    .lang-btn{
+
+        font-size:13px;
+
+    }
+
+    .nav-links{
+
+        width:100%;
+
+    }
+
+}
+
+/* =======================================================
+   RESPONSIVE PART 2
+   Hero Section
+=======================================================*/
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .hero{
+
+        gap:60px;
+
+    }
+
+    .hero-content{
+
+        max-width:520px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding:140px 40px 80px;
+
+        gap:50px;
+
+    }
+
+    .hero-content{
+
+        max-width:100%;
+
+    }
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    .btn-get{
+
+        display:inline-block;
+
+        margin-top:10px;
+
+    }
+
+    .social-icons{
+
+        justify-content:center;
+
+    }
+
+    .hero-image{
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .hero-image img{
+
+        width:340px;
+
+        max-width:90%;
+
+    }
+
+}
+
+
+/* Telefon */
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding:130px 25px 60px;
+
+        gap:35px;
+
+    }
+
+    .hero h5{
+
+        font-size:14px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+        line-height:1.2;
+
+    }
+
+    .hero h2{
+
+        font-size:26px;
+
+        line-height:1.4;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        margin-bottom:18px;
+
+    }
+
+    .hero-image img{
+
+        width:280px;
+
+    }
+
+    .btn-get{
+
+        padding:14px 30px;
+
+        font-size:15px;
+
+    }
+
+    .social-icons{
+
+        gap:18px;
+
+        margin-top:25px;
+
+    }
+
+    .social-icons img{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+}
+
+
+/* Küçük Telefon */
+
+@media (max-width:480px){
+
+    .hero{
+
+        padding:120px 20px 50px;
+
+    }
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+    .hero h2{
+
+        font-size:22px;
+
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+    .hero-image img{
+
+        width:230px;
+
+    }
+
+    .btn-get{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:15px;
+
+    }
+
+    .social-icons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .social-icons img{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+}
+
+
+/* iPhone SE */
+
+@media (max-width:375px){
+
+    .hero{
+
+        padding:110px 16px 40px;
+
+    }
+
+    .hero h1{
+
+        font-size:26px;
+
+    }
+
+    .hero h2{
+
+        font-size:20px;
+
+    }
+
+    .hero h5{
+
+        font-size:13px;
+
+    }
+
+    .hero p{
+
+        font-size:13px;
+
+    }
+
+    .hero-image img{
+
+        width:200px;
+
+    }
+
+}
+
+/* =======================================================
+   RESPONSIVE PART 3
+   About + Skills + Projects
+=======================================================*/
+
+/* ===========================
+   About Section
+===========================*/
+
+@media (max-width:1200px){
+
+    .about-container{
+
+        gap:40px;
+
+    }
+
+    .about-content{
+
+        max-width:100%;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .about-section{
+
+        padding:80px 30px;
+
+    }
+
+    .about-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .about-image{
+
+        text-align:center;
+
+    }
+
+    .about-image img{
+
+        width:200px;
+        height:200px;
+
+    }
+
+    .about-content{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:30px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .about-section{
+
+        padding:70px 20px;
+
+    }
+
+    .about-content{
+
+        padding:25px;
+
+    }
+
+    .about-content h2{
+
+        font-size:32px;
+
+    }
+
+    .about-content h3{
+
+        font-size:22px;
+
+    }
+
+    .about-content p{
+
+        font-size:15px;
+
+        line-height:1.9;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .about-image img{
+
+        width:170px;
+        height:170px;
+
+    }
+
+    .about-content{
+
+        padding:20px;
+
+    }
+
+    .about-content h2{
+
+        font-size:28px;
+
+    }
+
+    .about-content h3{
+
+        font-size:20px;
+
+    }
+
+    .about-content p{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ===========================
+   Technologies
+===========================*/
+
+@media (max-width:1200px){
+
+    .icon-list{
+
+        grid-template-columns:repeat(5,1fr);
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .icon-list{
+
+        grid-template-columns:repeat(4,1fr);
+
+        gap:22px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .icon-list{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:20px;
+
+    }
+
+    .icon-item img{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .icon-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .icon-item img{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+    .icon-item span{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ===========================
+   Projects
+===========================*/
+
+@media (max-width:1400px){
+
+    .projects-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+
+@media (max-width:1100px){
+
+    .projects-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .projects-section{
+
+        padding:80px 20px;
+
+    }
+
+    .projects-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+
+        padding:0;
+
+    }
+
+    .card-inner{
+
+        height:280px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card-inner{
+
+        height:320px;
+
+    }
+
+}
+
+@media (max-width:375px){
+
+    .projects-section{
+
+        padding:70px 15px;
+
+    }
+
+    .card-inner{
+
+        height:300px;
+
+    }
+
+    .card-back p{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* =======================================================
+   RESPONSIVE PART 4
+   Contact + Footer + Son Dokunuşlar
+=======================================================*/
+
+/* ===========================
+   Contact
+===========================*/
+
+@media (max-width:992px){
+
+    .contact-section{
+
+        padding:70px 30px;
+
+    }
+
+    .contact-container{
+
+        flex-direction:column;
+
+        gap:40px;
+
+        padding:35px;
+
+    }
+
+    .contact-info{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .contact-form{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .contact-section{
+
+        padding:60px 20px;
+
+    }
+
+    .contact-container{
+
+        padding:30px 20px;
+
+        border-radius:18px;
+
+    }
+
+    .contact-info h2{
+
+        font-size:30px;
+
+    }
+
+    .contact-text{
+
+        max-width:100%;
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .contact-gif{
+
+        width:180px;
+        height:180px;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+    .contact-form button{
+
+        padding:15px;
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .contact-section{
+
+        padding:50px 15px;
+
+    }
+
+    .contact-container{
+
+        padding:20px 15px;
+
+    }
+
+    .contact-info h2{
+
+        font-size:26px;
+
+    }
+
+    .contact-gif{
+
+        width:150px;
+        height:150px;
+
+    }
+
+    .contact-text{
+
+        font-size:14px;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+
+        font-size:14px;
+
+    }
+
+    .contact-form button{
+
+        width:100%;
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ===========================
+   Küçük Telefonlar
+===========================*/
+
+@media (max-width:375px){
+
+    .section-title{
+
+        font-size:28px;
+
+    }
+
+    .about-content{
+
+        padding:18px;
+
+    }
+
+    .contact-container{
+
+        padding:18px 12px;
+
+    }
+
+    .contact-gif{
+
+        width:130px;
+        height:130px;
+
+    }
+
+    .icon-item span{
+
+        font-size:12px;
+
+    }
+
+}
+
+/* ===========================
+   Dokunmatik Cihazlar
+===========================*/
+
+@media (hover:none){
+
+    .project-card:hover .card-inner{
+
+        transform:none;
+
+    }
+
+    .social-icons a:hover img{
+
+        transform:none;
+
+        box-shadow:none;
+
+    }
+
+    .contact-gif:hover{
+
+        transform:none;
+
+    }
+
+    .about-image img:hover{
+
+        transform:none;
+
+    }
+
+}
+
+.project-card.active .card-inner{
+    transform: rotateY(180deg);
+}
+
+/* ===========================
+   Hareket Hassasiyeti
+===========================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
