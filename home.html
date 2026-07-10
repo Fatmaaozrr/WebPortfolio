@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fatma - Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <nav class="navbar">
+    <a href="#home" class="logo">
+    <img src="pictures/weblogo2.png" alt="Fatma Özer Logo">
+  </a>
+    <ul class="nav-links">
+      <li><a href="#home">ANASAYFA</a></li>
+      <li><a href="#about">HAKKIMDA</a></li>
+      <li><a href="#projects">PROJELER</a></li>
+      <li><a href="#contact">İLETİŞİM</a></li>
+    </ul>
+
+    <div class="language-switcher">
+    <button class="lang-btn active" data-lang="tr">TR</button>
+    <span>|</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+</div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h5 style="color: #5fbefd;">FATMA ÖZER</h5>
+      <h1>Selam! Ben FATMA</h1>
+      <h2>Ben bir <span class="typing"></span></h2>
+      <p>Kod ile tasarımı bir araya getirerek modern, erişilebilir ve kullanıcı odaklı web deneyimleri geliştiriyorum.</p>
+      <p>Her projede performansı, kullanılabilirliği ve estetiği ön planda tutuyorum.</p>
+      <a href="#contact" class="btn-get">İletişime Geç !</a>
+      <div class="social-icons">
+        <a href="#"><img src="pictures/github.png" alt="github" ></a>
+        <a href="#"><img src="pictures/youtube.png" alt="youtube" ></a>
+        <a href="#"><img src="pictures/linkedin.png" alt="linkedin"></a>
+        <a href="#"><img src="pictures/instagram.png" alt="linkedin"></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="pictures/megif2.gif" alt="Fatma">
+    </div>
+  </section>
+
+  <!--- About Me --->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <!-- Profil Resmi -->
+      <figure class="about-image">
+        <img src="pictures/me.png" alt="Fatma Özer - Frontend Developer" loading="lazy" width="300" height="300">
+        <figcaption class="sr-only">Fatma Özer</figcaption>
+      </figure>
+  
+      <!-- İçerik Kısmı -->
+      <article class="about-content glass">
+        <header>
+          <h2 class="section-title">Hakkımda</h2>
+        </header>
+        
+        <p class="about-description">
+          Merhaba! Ben Fatma Özer. Dijital deneyimler tasarlamayı ve geliştirmeyi seven bir yazılım geliştiricisiyim. 
+          Front-End geliştirme alanında uzmanlaşırken, modern teknolojilerle kullanıcı odaklı, performanslı ve sürdürülebilir web uygulamaları geliştirmeye odaklanıyorum. 
+          Aynı zamanda yalnızca web teknolojileriyle sınırlı kalmayıp, farklı yazılım alanlarını keşfetmeyi, yeni teknolojiler öğrenmeyi ve kullanıcı odaklı çözümler üretmeyi seviyorum.
+        </p>
+
+        <!-- Yetenekler Bölümü -->
+<section aria-labelledby="skills-heading">
+  <h3 id="skills-heading" class="subsection-title">
+    🛠️ Kullandığım Teknolojiler
+  </h3>
+
+  <div class="icon-list" role="list">
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+           alt="HTML5" width="40" height="40" loading="lazy">
+      <span>HTML5</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+           alt="CSS3" width="40" height="40" loading="lazy">
+      <span>CSS3</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+           alt="JavaScript" width="40" height="40" loading="lazy">
+      <span>JavaScript</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+           alt="React" width="40" height="40" loading="lazy">
+      <span>React</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+           alt="Bootstrap" width="40" height="40" loading="lazy">
+      <span>Bootstrap</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+           alt="Tailwind CSS" width="40" height="40" loading="lazy">
+      <span>Tailwind</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+           alt="Node.js" width="40" height="40" loading="lazy">
+      <span>Node.js</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+           alt="PHP" width="40" height="40" loading="lazy">
+      <span>PHP</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+           alt="Laravel" width="40" height="40" loading="lazy">
+      <span>Laravel</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+           alt="SQL" width="40" height="40" loading="lazy">
+      <span>SQL</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+           alt="PostgreSQL" width="40" height="40" loading="lazy">
+      <span>PostgreSQL</span>
+    </div>
+
+        <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+           alt="MySQL" width="40" height="40" loading="lazy">
+      <span>MySQL</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+           alt="Git" width="40" height="40" loading="lazy">
+      <span>Git</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+           alt="Firebird" width="40" height="40" loading="lazy">
+      <span>Firebird</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Araçlar Bölümü -->
+<section aria-labelledby="tools-heading">
+  <h3 id="tools-heading" class="subsection-title">
+    🧰 Kullandığım Araçlar
+  </h3>
+
+  <div class="icon-list" role="list">
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+           alt="Visual Studio Code" width="40" height="40" loading="lazy">
+      <span>VS Code</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+           alt="Git" width="40" height="40" loading="lazy">
+      <span>Git</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+           alt="GitHub" width="40" height="40" loading="lazy">
+      <span>GitHub</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+           alt="Adobe Photoshop" width="40" height="40" loading="lazy">
+      <span>Photoshop</span>
+    </div>
+
+    <!-- SAP -->
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.simpleicons.org/sap/0FAAFF"
+           alt="SAP" width="40" height="40" loading="lazy">
+      <span>SAP</span>
+    </div>
+
+    <!-- AnyDesk -->
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.simpleicons.org/anydesk/EF443B"
+           alt="AnyDesk" width="40" height="40" loading="lazy">
+      <span>AnyDesk</span>
+    </div>
+
+    <!-- Microsoft Office -->
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows11/windows11-original.svg"
+           alt="Microsoft Office" width="40" height="40" loading="lazy">
+      <span>MS Office</span>
+    </div>
+
+     <div class="icon-item" role="listitem">
+      <img src="https://cdn.simpleicons.org/postman"
+           alt="Postman" width="40" height="40" loading="lazy">
+      <span>Postman</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.simpleicons.org/npm"
+           alt="NPM" width="40" height="40" loading="lazy">
+      <span>NPM</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
+           alt="Vite.js" width="40" height="40" loading="lazy">
+      <span>Vite.js</span>
+    </div>
+
+    <div class="icon-item" role="listitem">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+           alt="Docker" width="40" height="40" loading="lazy">
+      <span>Docker</span>
+    </div>
+
+  </div>
+</section>
+
+
+      </article>
+    </div>
+  </section>
+
+  <!--Project-->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Projelerim</h2>
+    <div class="projects-grid">
+      <!-- 10 Proje Kartı -->
+      <!-- Proje 1 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 2 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 3 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 4 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 5 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 6 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 7 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 8 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 9 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      <!-- Proje 10 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <h3>Proje 1</h3>
+          </div>
+          <div class="card-back">
+            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Canlı Gör</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>İletişime Geç</h2>
+        <img src="pictures/megif.gif" alt="İletişim Animasyonu" class="contact-gif">
+        <p class="contact-text">
+          Yazılım geliştirme, web teknolojileri ve yeni projeler üzerine konuşmayı sevuyorum.
+          Birlikte çalışmak veya sadece fikir alışverişinde bulunmak isterseniz bana ulaşabilirsiniz.
+        </p>
+  
+      <form class="contact-form">
+        <input type="text" placeholder="Adınız Soyadınız" required>
+        <input type="email" placeholder="E-posta" required>
+        <textarea placeholder="Mesajınız..." rows="5" required></textarea>
+        <button type="submit">Gönder</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
