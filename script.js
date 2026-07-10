@@ -238,6 +238,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// EmailJS (Güvenli Sürüm)
+emailjs.init("VuAEUOz9IV_kkp9QV");// Public Key'i buraya ekleyin EmailJS hesabınızdan alabilirsiniz.
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_kz24ymo", // Service ID
+        "template_lubprqu", // Template ID
+        this
+    )
+    .then(() => {
+
+        alert("Mesajınız başarıyla gönderildi.");
+
+        form.reset();
+
+    })
+    .catch((error) => {
+
+        alert("Bir hata oluştu.");
+
+        console.log(error);
+
+    });
+
+});
+
+// Dil Değiştirme (Geliştirilmiş)
 const translations = {
     tr: {
         home: "ANASAYFA",

@@ -413,16 +413,36 @@
           Birlikte çalışmak veya sadece fikir alışverişinde bulunmak isterseniz bana ulaşabilirsiniz.
         </p>
   
-      <form class="contact-form">
-        <input type="text" placeholder="Adınız Soyadınız" required>
-        <input type="email" placeholder="E-posta" required>
-        <textarea placeholder="Mesajınız..." rows="5" required></textarea>
-        <button type="submit">Gönder</button>
-      </form>
+      <form id="contact-form" class="contact-form">
+
+    <input
+        type="text"
+        name="from_name"
+        placeholder="Adınız Soyadınız"
+        required>
+
+    <input
+        type="email"
+        name="from_email"
+        placeholder="E-posta"
+        required>
+
+    <textarea
+        name="message"
+        rows="5"
+        placeholder="Mesajınız..."
+        required></textarea>
+
+    <button type="submit">
+        Gönder
+    </button>
+
+</form>
     </div>
   </section>
   
-
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+  
 </body>
 </html>
