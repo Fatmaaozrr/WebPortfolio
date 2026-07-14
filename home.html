@@ -8,11 +8,13 @@
   <meta name="description" content="Fatma Özer | Software Developer & Front-End Developer Portfolio">
   <link rel="stylesheet" href="style.css">
 
+  <!--
   <meta http-equiv="Content-Security-Policy"
   content="default-src 'self';
   img-src 'self' https: data:;
   script-src 'self' https://cdn.jsdelivr.net;
   style-src 'self' 'unsafe-inline';">
+-->
 
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -37,7 +39,7 @@
     <ul class="nav-links">
       <li><a href="#home" data-i18n="home">ANASAYFA</a></li>
       <li><a href="#about" data-i18n="about">HAKKIMDA</a></li>
-      <li><a href="#projects" data-i18n="projects">PROJELER</a></li>
+      <!--<li><a href="#projects" data-i18n="projects">PROJELER</a></li>-->
       <li><a href="#contact" data-i18n="contact">İLETİŞİM</a></li>
     </ul>
 
@@ -57,7 +59,10 @@
     <div class="hero-content">
       <h5 style="color: #5fbefd;">FATMA ÖZER</h5>
       <h1 data-i18n="heroTitle">Selam! Ben FATMA</h1>
-      <h2 data-i18n="heroIntro">Ben bir <span class="typing"></span></h2>
+      <h2>
+        <span data-i18n="heroIntro">Ben bir</span>
+        <span class="typing"></span>
+      </h2>
       <p data-i18n="heroText1">Kod ile tasarımı bir araya getirerek modern, erişilebilir ve kullanıcı odaklı web deneyimleri geliştiriyorum.</p>
       <p data-i18n="heroText2">Her projede performansı, kullanılabilirliği ve estetiği ön planda tutuyorum.</p>
       <a href="#contact" class="btn-get" data-i18n="contactBtn">İletişime Geç !</a>
@@ -273,16 +278,15 @@
     </div>
   </section>
 
-  <!--Project-->
+  <!--Project Section
   <section id="projects" class="projects-section">
     <h2 class="section-title" data-i18n="projectsTitle">Projelerim</h2>
     <div class="projects-grid">
-      <!-- 10 Proje Kartı -->
-      <!-- Proje 1 -->
+
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
+            <img src="pictures/me.png" alt="Proje 1">
             <h3 data-i18n="project1Title">Proje 1</h3>
           </div>
           <div class="card-back">
@@ -292,127 +296,57 @@
           </div>
         </div>
       </div>
-      <!-- Proje 2 -->
+
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
+            <img src="pictures/me.png" alt="Proje 1">
+            <h3>Proje 2</h3>
           </div>
           <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <p>Proje 2 açıklaması buraya gelecek.</p>
             <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn">Canlı Gör</a>
           </div>
         </div>
       </div>
-      <!-- Proje 3 -->
+    
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
+            <img src="pictures/me.png" alt="Proje 1">
+            <h3>Proje 3</h3>
           </div>
           <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <p>Proje 3 açıklaması buraya gelecek.</p>
             <a href="#" target="_blank"  rel="noopener noreferrer">GitHub</a>
             <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn">Canlı Gör</a>
           </div>
         </div>
       </div>
-      <!-- Proje 4 -->
+    
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
+            <img src="pictures/me.png" alt="Proje 1">
+            <h3>Proje 3</h3>
           </div>
           <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <p>Proje 3 açıklaması buraya gelecek.</p>
             <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn  ">Canlı Gör</a>
           </div>
         </div>
       </div>
-      <!-- Proje 5 -->
+     
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
+            <img src="pictures/me.png" alt="Proje 1">
+            <h3>Proje 4</h3>
           </div>
           <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn">Canlı Gör</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proje 6 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
-          </div>
-          <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn">Canlı Gör</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proje 7 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
-          </div>
-          <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn  ">Canlı Gör</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proje 8 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
-          </div>
-          <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Canlı Gör</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proje 9 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
-          </div>
-          <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn">Canlı Gör</a>
-          </div>
-        </div>
-      </div>
-      <!-- Proje 10 -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://via.placeholder.com/300x200?text=Proje+1" alt="Proje 1">
-            <h3>Proje 1</h3>
-          </div>
-          <div class="card-back">
-            <p>Proje 1 açıklaması buraya gelecek.</p>
+            <p>Proje 4 açıklaması buraya gelecek.</p>
             <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="#" target="_blank" rel="noopener noreferrer" data-i18n="liveDemoBtn">Canlı Gör</a>
           </div>
@@ -421,6 +355,8 @@
       
     </div>
   </section>
+  Project Section-->
+
 
   <section class="contact-section" id="contact">
     <div class="contact-container">

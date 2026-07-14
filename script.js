@@ -149,44 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   };
 
-  // Typing Effect (Geliştirilmiş)
-  const initTypingEffect = () => {
-    const typingElement = document.querySelector('.typing');
-    if (!typingElement) return;
 
-    const typingText = ['Yazılım Geliştirici...', 'Web Tasarımcı...', 'Freelancer...', 'Problem Çözücü...', 'Takım Oyuncusu...'];
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let isDeleting = false;
-    let typingSpeed = 100;
 
-    const type = () => {
-      currentText = typingText[count];
-      
-      if (isDeleting) {
-        typingElement.textContent = currentText.substring(0, index--);
-        typingSpeed = 50;
-        
-        if (index === 0) {
-          isDeleting = false;
-          count = (count + 1) % typingText.length;
-        }
-      } else {
-        typingElement.textContent = currentText.substring(0, index++);
-        typingSpeed = 100;
-        
-        if (index > currentText.length) {
-          typingSpeed = 1000;
-          isDeleting = true;
-        }
-      }
-      
-      setTimeout(type, typingSpeed);
-    };
 
-    type();
-  };
 
   // Yardımcı Fonksiyonlar
   function throttle(func, limit) {
@@ -222,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Başlatıcılar
   initStars();
-  initTypingEffect();
 
   // ScrollReveal (Kontrol Edilmiş)
   if (typeof ScrollReveal !== 'undefined') {
@@ -370,7 +334,10 @@ const translations = {
 // ==============================
 // Dil Değiştirme
 // ==============================
+console.log(typeof restartTyping);
 function changeLanguage(lang) {
+
+  currentLanguage = lang;
 
     // Metinleri değiştir
     document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -407,6 +374,12 @@ function changeLanguage(lang) {
 
     // Seçilen dili kaydet
     localStorage.setItem("language", lang);
+
+   // Seçilen dili kaydet
+localStorage.setItem("language", lang);
+
+// Typing'i en son yeniden başlat
+restartTyping();
 }
 
 
@@ -424,6 +397,96 @@ document.querySelectorAll(".lang-btn").forEach((button) => {
 
 });
 
+// ==============================
+// Typing Effect
+// ==============================
+
+const typingTexts = {
+    tr: [
+        "Yazılım Geliştirici",
+        "Frontend Developer",
+        "Web Tasarımcı",
+        "Problem Çözücü",
+        "Takım Oyuncusu"
+    ],
+
+    en: [
+        "Software Developer",
+        "Frontend Developer",
+        "Web Designer",
+        "Problem Solver",
+        "Team Player"
+    ]
+};
+
+let currentLanguage = "tr";
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+let typingTimeout;
+
+function typeEffect() {
+
+    const typing = document.querySelector(".typing");
+
+    if (!typing) return;
+
+    const words = typingTexts[currentLanguage];
+
+    const currentWord = words[wordIndex];
+
+    if (!deleting) {
+
+        typing.textContent = currentWord.substring(0, charIndex++);
+
+        if (charIndex > currentWord.length) {
+
+            deleting = true;
+
+            typingTimeout = setTimeout(typeEffect, 1200);
+
+            return;
+
+        }
+
+    } else {
+
+        typing.textContent = currentWord.substring(0, charIndex--);
+
+        if (charIndex < 0) {
+
+            deleting = false;
+
+            wordIndex = (wordIndex + 1) % words.length;
+
+        }
+
+    }
+
+    typingTimeout = setTimeout(typeEffect, deleting ? 50 : 100);
+
+}
+
+function restartTyping() {
+
+    clearTimeout(typingTimeout);
+
+    wordIndex = 0;
+    charIndex = 0;
+    deleting = false;
+
+    const typing = document.querySelector(".typing");
+
+    if (!typing) return;
+
+    typing.textContent = "";
+
+    setTimeout(() => {
+        typeEffect();
+    }, 100);
+
+}
 
 // ==============================
 // Sayfa Açılırken
@@ -433,6 +496,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const savedLanguage = localStorage.getItem("language") || "tr";
 
+    currentLanguage = savedLanguage;
+
     changeLanguage(savedLanguage);
+
+    restartTyping();
 
 });
